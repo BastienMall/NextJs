@@ -12,7 +12,16 @@ import {
   createIcon,
 } from '@chakra-ui/react'
 
+import { useState } from 'react'
+
 export default function CardWithIllustration() {
+
+const [color, setColor] = useState(false);
+
+  const changeColor = () => {
+    setColor: color == false ? true : false
+  }
+
   return (
     <Flex
       minH={'100vh'}
@@ -53,12 +62,12 @@ export default function CardWithIllustration() {
             }}
           />
           <Button
-            bg={'blue.400'}
             rounded={'full'}
-            color={'white'}
+            bgColor={ color? 'white' : 'black'}
             flex={'1 0 auto'}
-            _hover={{ bg: 'blue.500' }}
-            _focus={{ bg: 'blue.500' }}>
+            onClick={()=>setColor(!color)}
+            >
+
             Subscribe
           </Button>
         </Stack>
