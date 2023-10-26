@@ -1,5 +1,8 @@
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
+import SidebarWithHeader from '@/Components/Sidebar'
+import LargeWithNewsletter from '@/Components/footer'
+import CardWithIllustration from '@/Components/Content'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,6 +16,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
+    <SidebarWithHeader/>
+    <LargeWithNewsletter/>
+
     </>
   )
 }
