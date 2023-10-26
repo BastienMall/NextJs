@@ -33,7 +33,7 @@ import {
   FiChevronDown,
 } from 'react-icons/fi'
 import { IconType } from 'react-icons'
-import CardWithIllustration from '../Content'
+import CardWithIllustration from '../Newsletter'
 
 interface LinkItemProps {
   name: string
