@@ -1,1 +1,0 @@
-// Pour faire une redirection au sein de nest, on crée un ficher spécifique avec le nom de la page 

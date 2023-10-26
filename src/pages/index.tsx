@@ -2,11 +2,12 @@ import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import SidebarWithHeader from '@/Components/Sidebar'
 import LargeWithNewsletter from '@/Components/footer'
-import CardWithIllustration from '@/Components/Newsletter'
+import { NextPageContext } from 'next'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Home(props: any) {
+  console.log(props)
   return (
     <>
       <Head>
@@ -16,9 +17,26 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
+    <main>
+        
+    </main>
+
     <SidebarWithHeader/>
     <LargeWithNewsletter/>
 
     </>
-  )
+  ) 
+}
+
+
+
+ 
+// This gets called on every request
+export async function getServerSideProps(context: NextPageContext) {
+  // Fetch data from external API
+
+  const data = context.query
+ 
+  // Pass data to the page via props
+  return { props: { data } }
 }
