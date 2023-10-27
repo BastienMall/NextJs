@@ -6,7 +6,7 @@ import { NextPageContext } from 'next'
 import Head from 'next/head'
 import Success from '@/Components/Success'
 
-
+// Correspond au Front
 export default function Home(props: any) {
     console.log(props)
     return (
@@ -19,13 +19,14 @@ export default function Home(props: any) {
         </Head>
         
       <main>
-       <Success title={props.data.id}/>    
+       <Success title={props.data.id}/>   
       </main>
       </>
     ) 
   }
 
 
+//Correspond au back
 export async function getServerSideProps(context: NextPageContext) {
     // Fetch data from external API
   
